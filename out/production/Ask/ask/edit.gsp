@@ -9,29 +9,29 @@
     <div class="form-group row">
         <div class="col-lg-12 input-group-lg">
             <input style="width:100%;" class="form-control" type="text" placeholder="What Question would you like to ask?"
-            value ="What's the best way for USG to keep in touch with students?"/>
+            value = "This is the question......"/>
         </div>
     </div>
 
     <div style="padding-top:10px;" class="form-group row">
         <div style="padding-right:10px;float:left;width:50%;" class="col-lg-6  input-group-lg">
             <input class="form-control" type="text" placeholder="Option 1"
-                   value = "E-Mail"/>
+                   value = "Answer 1"/>
         </div>
         <div style="padding-left:10px; float:right;width:50%;" class="col-lg-6  input-group-lg">
             <input class="form-control" type="text" placeholder="Option 2"
-                   value = "Facebook"/>
+                   value = "Answer 2"/>
         </div>
     </div>
 
     <div style="padding-top:10px;" class="form-group row">
         <div style="padding-right:10px; float:left;width:50%;" class="col-lg-6  input-group-lg">
             <input class="form-control" type="text" placeholder="Option 3"
-                   value = "Twitter"/>
+                   value = "Answer 3"/>
         </div>
         <div style="padding-left:10px; float:right;width:50%;" class="col-lg-6  input-group-lg">
             <input class="form-control" type="text" placeholder="Option 4"
-                   value = "On Campus"/>
+                   value = "Answer 4"/>
         </div>
     </div>
 

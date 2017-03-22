@@ -1,12 +1,11 @@
 package ask
-import grails.plugin.springsecurity.authentication.encoding.BCryptPasswordEncoder;
 
 class TouchController {
 
     def index() { }
     def scan() {
         // if there is a card id submission
-
+        println(params);
         if (params.cardid){
             redirect(action: "vote")
         }

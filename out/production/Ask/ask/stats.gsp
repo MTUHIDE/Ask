@@ -23,10 +23,10 @@
         data.addColumn('string', 'Answers');
         data.addColumn('number', 'Responses');
         data.addRows([
-            ['Option 1', 3],
-            ['Option 2', 1],
-            ['Option 3', 2],
-            ['Option 4', 6]
+            ['Email', 4],
+            ['Facebook', 5],
+            ['Twitter', 4],
+            ['On Campus', 2]
         ]);
 
         // Set chart options
@@ -43,16 +43,16 @@
 
 <body>
 <div style="padding-left:10%; padding-right:10%;">
-    <h1 style = "text-align: center;"> Stats on Question 1 </h1>
+    <h1 style = "text-align: center;"> Results for question </h1>
 
     <!--Div that will hold the pie chart-->
     <div style="float:left;">
-        <h2> This is the question...</h2>
+        <h2> What's the best way for USG to keep in touch with students?</h2>
         <ol style="font-size: medium;">
-            <li>This is Answer 1</li>
-            <li>This is Answer 2</li>
-            <li>This is Answer 3</li>
-            <li>This is Answer 4</li>
+            <li>Email</li>
+            <li>Facebook</li>
+            <li>Twitter</li>
+            <li>On Campus</li>
 
         </ol>
     </div>

@@ -1,4 +1,4 @@
-package Ask
+package ask
 
 class Vote {
 

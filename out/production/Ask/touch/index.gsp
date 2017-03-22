@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title> Swipe your Michigan Tech ID </title>
+    <title> Share your opinion! </title>
 </head>
 <body>
 <asset:stylesheet href="main.css"/>
@@ -10,9 +10,11 @@
     <h1>Share your opinion!</h1>
 </div>
 <div id="container">
-    <div id="center" class="button">
-        <g:link style="color: inherit;text-decoration: inherit;" action="scan"> Tap to begin </g:link>
-    </div>
+    <g:link style="color: inherit;text-decoration: inherit;" action="scan">
+        <div class="button center">
+            Tap to begin
+        </div>
+    </g:link>
 </div>
 </body>
 </html>

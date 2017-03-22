@@ -11,6 +11,7 @@
         <a class="btn btn-primary btn-sm btn-block" href="ask.html"> Make a Question </a>
         <a class="btn btn-primary btn-sm btn-block" href="ask/edit.html"> Edit a Question </a>
         <a class="btn btn-primary btn-sm btn-block"href="ask/stats.html"> See Results from a Question </a>
+        <a class="btn btn-primary btn-sm btn-block"href="touch/index.html"> Touch based interface </a>
 
 
     </div>

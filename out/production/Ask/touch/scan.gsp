@@ -27,8 +27,9 @@
     <h1>Swipe your Michigan Tech ID</h1>
 </div>
 <div id="container">
-    <div id="center">
+    <div style="vertical-align: middle;">
         <!--Put image here-->
+
     </div>
 </div>
 </body>

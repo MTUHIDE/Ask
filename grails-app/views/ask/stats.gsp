@@ -22,11 +22,19 @@
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'Answers');
         data.addColumn('number', 'Responses');
+        row1 = [document.getElementById("option1").innerText, Number(document.getElementById("result1").innerText)];
+        row2 = [document.getElementById("option2").innerText, Number(document.getElementById("result2").innerText)];
+        row3 = [document.getElementById("option3").innerText, Number(document.getElementById("result3").innerText)];
+        row4 = [document.getElementById("option4").innerText, Number(document.getElementById("result4").innerText)];
+        console.log(row1);
+        console.log(row2);
+        console.log(row3);
+        console.log(row4);
         data.addRows([
-            ['Email', 4],
-            ['Facebook', 5],
-            ['Twitter', 4],
-            ['On Campus', 2]
+            row1,
+            row2,
+            row3,
+            row4
         ]);
 
         // Set chart options
@@ -47,12 +55,12 @@
 
     <!--Div that will hold the pie chart-->
     <div style="float:left;">
-        <h2> What's the best way for USG to keep in touch with students?</h2>
+        <h2> ${question} </h2>
         <ol style="font-size: medium;">
-            <li>Email</li>
-            <li>Facebook</li>
-            <li>Twitter</li>
-            <li>On Campus</li>
+            <li id="option1" >${option1}</li>
+            <li id="option2" >${option2}</li>
+            <li id="option3" >${option3}</li>
+            <li id="option4" >${option4}</li>
 
         </ol>
     </div>
@@ -62,6 +70,12 @@
     </div>
 
 </div>
+
+<div id="result1" style="display:none">${result1}</div>
+<div id="result2" style="display:none">${result2}</div>
+<div id="result3" style="display:none">${result3}</div>
+<div id="result4" style="display:none">${result4}</div>
+
 
 </body>
 

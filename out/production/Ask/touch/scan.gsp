@@ -19,6 +19,17 @@
             setTimeout(doneScanning, 500);
         }
     </script>
+    <script>
+        // idle redirect
+        // if the user abandons the process go home
+        function redirect(){
+            window.location.href = "/touch/";
+        }
+
+        // 30 seconds
+        setTimeout(redirect, 30 * 1000);
+
+    </script>
 </head>
 <body>
 <asset:stylesheet href="main.css"/>

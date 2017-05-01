@@ -7,5 +7,6 @@ class Question {
 
     String  question;
     String[] options;
+    static hasMany = [vote : Vote];
 
 }

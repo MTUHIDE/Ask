@@ -12,12 +12,27 @@
         document.onkeypress = function(event) {
             var char = String.fromCharCode(event.charCode);
             scan_id += char;
+            console.log('Character is: ');
             console.log(char);
             // the card reader should deliver this all at once
             // so record this and in 500ms redirect
             // as the card reader should be done
-            setTimeout(doneScanning, 500);
+            if (event.charCode == 13) /* new line */
+            {
+                doneScanning();
+            }
         }
+    </script>
+    <script>
+        // idle redirect
+        // if the user abandons the process go home
+        function redirect(){
+            window.location.href = "/touch/";
+        }
+
+        // 30 seconds
+        setTimeout(redirect, 30 * 1000);
+
     </script>
 </head>
 <body>

@@ -7,5 +7,6 @@ class Vote {
 
     String user_id; // whatever is given from the card
     String question_id; // the question the user is responding to
+    String result;
 
 }

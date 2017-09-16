@@ -46,11 +46,11 @@ class TouchController {
         println q.options[2]
         println q.options[3]
         [question: q.question,
-                option1 : q.options[0],
-                option2 : q.options[1],
-                option3 : q.options[2],
-                option4 : q.options[3],
-                vid:params.vid]
+            option1 : q.options[0],
+            option2 : q.options[1],
+            option3 : q.options[2],
+            option4 : q.options[3],
+            vid:params.vid]
 
     }
 
@@ -64,7 +64,6 @@ class TouchController {
         vote.save(flush: true, failOnError:true); // will trigger an error if not saved
         //http://localhost:8080/touch/done?option=Pink
         println params.option
-
         //            def q2 = new Question(question:"What is your favorite sport?", options:["Football", "Basketball", "Soccer", "Baseball"])
         //    String user_id; // whatever is given from the card
         //String question_id; // the question the user is responding to

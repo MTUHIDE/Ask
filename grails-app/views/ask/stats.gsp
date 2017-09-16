@@ -38,7 +38,12 @@
         ]);
 
         // Set chart options
-        var options = {'title':'Results'};
+        var options = {'title':'Results',
+                        vAxis: {format: '#,###',
+                            minValue: 0,
+                            maxValue: 5
+                        }
+        };
 
         // Instantiate and draw our chart, passing in some options.
         var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
@@ -51,12 +56,12 @@
 
 <body>
 <div style="padding-left:10%; padding-right:10%;">
-    <h1 style = "text-align: center;"> Results for question </h1>
+    <h1 style = "text-align: center; color: #ffc900; text-shadow: #0d1016;"> Results for question </h1>
 
     <!--Div that will hold the pie chart-->
     <div style="float:left;">
         <h2> ${question} </h2>
-        <ol style="font-size: medium;">
+        <ol style="font-size: large; background: #00ffc900;">
             <li id="option1" >${option1}</li>
             <li id="option2" >${option2}</li>
             <li id="option3" >${option3}</li>

@@ -1,6 +1,6 @@
 <html>
-
 <asset:stylesheet src="application.css"/>
+<asset:stylesheet src="bootstrap.css"/>
 
 
 <!--Load the AJAX API-->
@@ -37,38 +37,71 @@
             row4
         ]);
 
+
         // Set chart options
-        var options = {'title':'Results'};
+        var options = {
+            'title': 'Results',
+            vAxis: {
+                format: '#,###',
+                minValue: 0,
+                maxValue: 5
+            }
+        };
 
         // Instantiate and draw our chart, passing in some options.
         var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
         chart.draw(data, options);
         var chart = new google.visualization.ColumnChart(document.getElementById("chart_div2"));
         chart.draw(data, options);
+
+
     }
+
 </script>
 
-
-<body>
+<body style="alignment: top;  background: #acacac">
 <div style="padding-left:10%; padding-right:10%;">
-    <h1 style = "text-align: center;"> Results for question </h1>
 
-    <!--Div that will hold the pie chart-->
-    <div style="float:left;">
-        <h2> ${question} </h2>
-        <ol style="font-size: medium;">
-            <li id="option1" >${option1}</li>
-            <li id="option2" >${option2}</li>
-            <li id="option3" >${option3}</li>
-            <li id="option4" >${option4}</li>
+    <h1 style = "font-size: 36px; text-align: center; color: #ffc900; text-shadow: -.75px 0 #000000,0 .75px #000000,.75px 0 #000000,0 -.75px #000000; margin-top: 40px"> Question Results </h1>
+        <div id="questionData">
+            <div class="row" style="margin-top: 50px">
+                <div class ="col-2">
+                <!--Div that will hold the pie chart-->
+                <div style = "float:left; border: thick solid #000000;">
+                    <div style = "border: thick solid #ffc900; border-width: 5px">
+                        <div style = "padding: 15px; padding-left: 40px; padding-right: 40px; background: #FFFFFF">
+                            <div>
+                                <h2>
+                                    <div class = "input-group">
+                                        <select>
+                                            <option value="default">Please select a Question</option>
+                                            <option>${question}</option>
+                                        </select>
+                                    </div>
+                                </h2>
+                                <script>
 
-        </ol>
-    </div>
-    <div style = "float:right;">
-        <div style="vertical-align:center;" id="chart_div"></div>
-        <div style="vertical-align:center;" id="chart_div2"></div>
-    </div>
+                                </script>
+                                <ol style="font-size: 24px;">
+                                    <li id="option1" >${option1}</li>
+                                    <li id="option2" >${option2}</li>
+                                    <li id="option3" >${option3}</li>
+                                    <li id="option4" >${option4}</li>
 
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style = " float:right; border: thick solid #000000; background: #ffc900;">
+                    <div id="chart_div" style = "padding: 5px"></div>
+                </div>
+                </div>
+            </div>
+                <div class="col-1" style="margin-top: 50px; border: thick solid #000000; background: #ffc900;">
+                    <div id="chart_div2" style = "padding: 5px"></div>
+                </div>
+        </div>
 </div>
 
 <div id="result1" style="display:none">${result1}</div>

@@ -8,7 +8,7 @@ class AskController {
         if (params.question){
             def o1 = params.option1;
             def o2 = params.option2;
-            def o3 = params.option3
+            def o3 = params.option3;
             def o4 = params.option4;
             def q1 = new Question(question:params.question,
                     options:[o1,o2,o3,o4])

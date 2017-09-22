@@ -1,19 +1,64 @@
 <!doctype html>
 <html>
 <head>
-    <title>Welcome</title>
+    <title>Master Menu</title>
     <asset:stylesheet src="application.css"/>
 
 </head>
 <body>
-    <div style="margin-left:10%; margin-right:10%;">
-        <h1 style = "text-align: center;"> What would you like to do? </h1>
-        <a class="btn btn-primary btn-sm btn-block" href="ask.html"> Make a Question </a>
-        <a class="btn btn-primary btn-sm btn-block" href="ask/edit.html"> Edit a Question </a>
-        <a class="btn btn-primary btn-sm btn-block"href="ask/stats.html"> See Results from a Question </a>
-        <a class="btn btn-primary btn-sm btn-block"href="touch/index.html"> Touch based interface </a>
 
-
+    <div class="container-fluid">
+        <div class="row no-gutter">
+            <div class="col-3 menuTile" id="block1">
+                <a href="ask.html">
+                    <div class="divText" style="height:100%; width: 100%;">
+                        <img src="Question-mark-blackandwhite.png"/>
+                        <h2 class="blackText"> Make a Question </h2>
+                    </div>
+                </a>
+            </div>
+            <div class="col-3 menuTile" id="block2">
+                <a href="ask/edit.html">
+                    <div class="divText" style="height:100%; width:100%;">
+                        <img src="Pencil-icon.png"/>
+                        <h2 class="whiteText"> Edit a Question </h2>
+                    </div>
+                </a>
+            </div>
+            <div class="col-3 menuTile" id="block3">
+                <a href="ask/stats.html">
+                    <div style="height: 100%; width: 100%;">
+                        <img src="../assets/images/22-512.png"/>
+                        <h2 class="blackText">See Results from a Question</h2>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row no-gutter">
+            <div class="col-3 menuTile" id="block4">
+                <a href="ask/stats.html">
+                    <div style="height:100%; width:100%;">
+                        <h2 class="whiteText">See Results from a Question</h2>
+                    </div>
+                </a>
+            </div>
+            <div class="col-3 menuTile" id="block5">
+                <a href="touch/index.html">
+                    <div style="height: 100%; width:100%;">
+                        <img src="../assets/images/52479-200.png"/>
+                        <h2 class="blackText">To Survey</h2>
+                    </div>
+                </a>
+            </div>
+            <div class="col-3 menuTile" id="block6">
+                <a href="ask/stats.html">
+                    <div style="height: 100%; width: 100%;">
+                        <h2 class="whiteText">HELP</h2>
+                    </div>
+                </a>
+            </div>
+        </div>
     </div>
+
 </body>
 </html>

@@ -12,15 +12,11 @@
         document.onkeypress = function(event) {
             var char = String.fromCharCode(event.charCode);
             scan_id += char;
-            console.log('Character is: ');
             console.log(char);
             // the card reader should deliver this all at once
             // so record this and in 500ms redirect
             // as the card reader should be done
-            if (event.charCode == 13) /* new line */
-            {
-                doneScanning();
-            }
+            setTimeout(doneScanning, 500);
         }
     </script>
     <script>
@@ -35,18 +31,11 @@
 
     </script>
 </head>
-<body style = "background: #acacac">
+<body>
 <asset:stylesheet href="main.css"/>
 <asset:stylesheet href="touch.css"/>
-
-<div style = "border: thick solid #000000; margin-left: 80px; margin-right: 80px; margin-top: 200px;">
-    <div style = "border: thick solid #ffc900; border-width: 5px">
-        <div style = "padding: 15px; padding-left: 40px; padding-right: 40px; background: #FFFFFF">
-            <h1 style = "font-size: 72px; text-align: center; color: #ffc900; text-shadow: -.75px 0 #000000,0 .75px #000000,.75px 0 #000000,0 -.75px #000000; margin: 40px">
-                Please Swipe your Michigan Tech ID
-            </h1>
-        </div>
-    </div>
+<div id="banner">
+    <h1>Swipe your Michigan Tech ID</h1>
 </div>
 <div id="container">
     <div style="vertical-align: middle;">

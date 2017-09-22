@@ -2,8 +2,7 @@ body{
     height:100%;
     width: 100%;
     margin:0;
-    padding: 1px;
-    background: lightgrey;
+    background: #8a8b8c;
 }
 
 
@@ -15,15 +14,20 @@ body{
 }
 
 .row{
-    /*margin: 2%;*/
+    overflow: hidden;
+    max-width: 100%;
+    margin: 2%;
+    padding: 0;
 
 }
 
 .menuTile{
 
     margin: 1%;
-    width: 30%;
+    width: 31%;
     text-align: center;
+    box-shadow:0 0 8px rgba(0,0,0,0.25);
+
 
 
 }
@@ -46,9 +50,9 @@ h2{
 }
 
 img{
-    width: 250px;
-    height: 250px;
-    margin: 15px;
+    width: 30%;
+    height: 30%;
+    margin: 15%;
 }
 
 .whiteText{
@@ -61,27 +65,27 @@ img{
 
 
 #block1{
-    background: #cccccc;
+    background: #8a8b8c;
 }
 
 #block2{
-    background: #d5ad18;
+    background: #ffcd00;
 }
 
 #block3{
-    background: #acacac;
+    background: #8a8b8c;
 }
 
 #block4{
-    background: #acacac;
+    background: #ffcd00;
 }
 
 #block5{
-    background: #ffc900;
+    background: #8a8b8c;
 }
 
 #block6{
-    background: #eaeaea;
+    background: #ffcd00;
 
 }
 

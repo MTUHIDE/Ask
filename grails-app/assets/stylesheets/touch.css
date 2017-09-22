@@ -3,6 +3,12 @@ body{
     margin: 0 0 0 0;
 }
 
+#usgLogo{
+    width:75%;
+    height: 75%;
+
+}
+
 #banner{
     background-color: rgb(255, 204, 65);
     height:150px;

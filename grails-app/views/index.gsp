@@ -3,6 +3,7 @@
 <head>
     <title>Master Menu</title>
     <asset:stylesheet src="application.css"/>
+    <asset:stylesheet src="menu.css"/>
 
 </head>
 <body>

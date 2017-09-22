@@ -39,6 +39,9 @@
 <asset:stylesheet href="main.css"/>
 <asset:stylesheet href="touch.css"/>
 
+
+
+
 <div style = "border: thick solid #000000; margin-left: 80px; margin-right: 80px; margin-top: 200px;">
     <div style = "border: thick solid #ffc900; border-width: 5px">
         <div style = "padding: 15px; padding-left: 40px; padding-right: 40px; background: #FFFFFF">
@@ -50,7 +53,7 @@
 </div>
 <div id="container">
     <div style="vertical-align: middle;">
-        <!--Put image here-->
+        <img id="usgLogo" class="center" src="${resource(dir:'images',file:'USG_logo.png')}" />
 
     </div>
 </div>

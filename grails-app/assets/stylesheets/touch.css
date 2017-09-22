@@ -6,11 +6,12 @@ body{
 #usgLogo{
     width:75%;
     height: 75%;
+    z-index: -1;
 
 }
 
 #banner{
-    background-color: rgb(255, 204, 65);
+    background-color: #ffcd00;
     height:150px;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     color: #ffffff;
@@ -49,7 +50,7 @@ body{
     padding-left:  50px;
     padding-right: 50px;
     display: inline-block;
-    border: thick solid #ffc900;
+    border: thick solid #ffcd00;
     border-width: 5px;
     outline: thick solid #000000;
     outline-width: 2px;

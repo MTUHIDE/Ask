@@ -63,8 +63,13 @@
 <!--navigation bar-->
 <body style="alignment: top;  background: #acacac">
 <div class = "navbtn" onmouseover = "openNav()">
+    <img src="${resource(dir:'images',file:'clipart-home-icon-6.png')}" />
+    <img src="${resource(dir:'images',file:'plainicon.com-10528-256px.png')}" />
+    <img src="${resource(dir:'images',file:'Question-mark-blackandwhite.png')}" />
+    <img src="${resource(dir:'images',file:'22-512.png')}" />
+    <img src="${resource(dir:'images',file:'52479-200.png')}" />
+    <img src="${resource(dir:'images',file:'1110.png')}" />
     <div id="myNav" class="nav" onmouseout = "closeNav()">
-        <h4 style = "text-align: left;"> Menu </h4>
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="http://localhost:8080/">Home</a>
         <a href="http://localhost:8080/ask/stats.html">Question Results</a>

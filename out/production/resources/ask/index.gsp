@@ -1,8 +1,30 @@
 <html>
 
 <asset:stylesheet src="application.css"/>
+<asset:stylesheet href="navigation.css"/>
+<asset:javascript src="navigation.js"/>
 
 <body>
+
+<!--navigation bar-->
+<div class = "navbtn" onmouseover = "openNav()">
+    <img src="${resource(dir:'images',file:'clipart-home-icon-6.png')}" />
+    <img src="${resource(dir:'images',file:'plainicon.com-10528-256px.png')}" />
+    <img src="${resource(dir:'images',file:'Question-mark-blackandwhite.png')}" />
+    <img src="${resource(dir:'images',file:'22-512.png')}" />
+    <img src="${resource(dir:'images',file:'52479-200.png')}" />
+    <img src="${resource(dir:'images',file:'1110.png')}" />
+    <div id="myNav" class="nav" onmouseout = "closeNav()">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="http://localhost:8080/">Home</a>
+        <a href="http://localhost:8080/ask/stats.html">Question Results</a>
+        <a href="http://localhost:8080/ask.html">Create a Question</a>
+        <a href="http://localhost:8080/ask/edit.html">Edit a Question</a>
+        <a href="http://localhost:8080/touch/index.html">Take the Survey</a>
+        <a href="#">Help</a>
+    </div>
+</div>
+
     <div style="padding-left:10%; padding-right:10%;">
         <h1 style = "text-align: center;"> Create a new question </h1>
         <form action="ask.html">

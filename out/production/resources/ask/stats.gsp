@@ -1,7 +1,8 @@
 <html>
 <asset:stylesheet src="application.css"/>
 <asset:stylesheet src="bootstrap.css"/>
-
+<asset:stylesheet href="navigation.css"/>
+<asset:javascript src="navigation.js"/>
 
 <!--Load the AJAX API-->
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -59,7 +60,26 @@
 
 </script>
 
+<!--navigation bar-->
 <body style="alignment: top;  background: #acacac">
+<div class = "navbtn" onmouseover = "openNav()">
+    <img src="${resource(dir:'images',file:'clipart-home-icon-6.png')}" />
+    <img src="${resource(dir:'images',file:'plainicon.com-10528-256px.png')}" />
+    <img src="${resource(dir:'images',file:'Question-mark-blackandwhite.png')}" />
+    <img src="${resource(dir:'images',file:'22-512.png')}" />
+    <img src="${resource(dir:'images',file:'52479-200.png')}" />
+    <img src="${resource(dir:'images',file:'1110.png')}" />
+    <div id="myNav" class="nav" onmouseout = "closeNav()">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="http://localhost:8080/">Home</a>
+        <a href="http://localhost:8080/ask/stats.html">Question Results</a>
+        <a href="http://localhost:8080/ask.html">Create a Question</a>
+        <a href="http://localhost:8080/ask/edit.html">Edit a Question</a>
+        <a href="http://localhost:8080/touch/index.html">Take the Survey</a>
+        <a href="#">Help</a>
+    </div>
+</div>
+
 <div style="padding-left:10%; padding-right:10%;">
 
     <h1 style = "font-size: 36px; text-align: center; color: #ffc900; text-shadow: -.75px 0 #000000,0 .75px #000000,.75px 0 #000000,0 -.75px #000000; margin-top: 40px"> Question Results </h1>

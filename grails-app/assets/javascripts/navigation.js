@@ -5,5 +5,5 @@ function openNav() {
 
 /*Closes the side navigation bar*/
 function closeNav() {
-    document.getElementById("myNav").style.width = "0";
+    document.getElementById("myNav").style.width = "0px";
 }

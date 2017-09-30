@@ -21,7 +21,7 @@
             <div class="col-sm-3 menuTile" id="block2">
                 <a href="ask/edit.html">
                     <div class="divText" style="height:100%; width:100%;">
-                        <img src="${resource(dir:'images',file:'pen-15.svg')}" />
+                        <img src="${resource(dir:'images',file:'22-512.png')}" />
                         <h2 class="blackText"> Edit </h2>
                     </div>
                 </a>

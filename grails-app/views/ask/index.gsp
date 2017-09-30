@@ -1,8 +1,25 @@
 <html>
 
 <asset:stylesheet src="application.css"/>
+<asset:stylesheet href="navigation.css"/>
+<asset:javascript src="navigation.js"/>
 
 <body>
+
+<!--navigation bar-->
+<div class = "navbtn" onmouseover = "openNav()">
+    <div id="myNav" class="nav" onmouseout = "closeNav()">
+        <h4 style = "text-align: left;"> Menu </h4>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="http://localhost:8080/">Home</a>
+        <a href="http://localhost:8080/ask/stats.html">Question Results</a>
+        <a href="http://localhost:8080/ask.html">Create a Question</a>
+        <a href="http://localhost:8080/ask/edit.html">Edit a Question</a>
+        <a href="http://localhost:8080/touch/index.html">Take the Survey</a>
+        <a href="#">Help</a>
+    </div>
+</div>
+
     <div style="padding-left:10%; padding-right:10%;">
         <h1 style = "text-align: center;"> Create a new question </h1>
         <form action="ask.html">

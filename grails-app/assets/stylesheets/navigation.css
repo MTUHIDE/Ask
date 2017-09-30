@@ -1,0 +1,58 @@
+/*the always visible nav bar*/
+.navbtn {
+    height: 100%;
+    width: 3%;
+    position: fixed;
+    z-index: 1;
+    background-color: #ffcd00;
+    overflow-x: hidden;
+    padding-top: 60px;
+}
+/*the side navigation menu (hidden until you hover over navbtn)*/
+.nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    overflow-x: hidden; /*no horizontal scroll*/
+    padding-top: 60px;
+    margin-left: 3%;
+    transition: 0.5s; /*0.5 seconds to slide out*/
+}
+
+/*header on navigation bar*/
+.nav h4 {
+    padding-left: 35px;
+    text-decoration: solid;
+    font-size: 30px;
+    color: #ffcd00;
+    display: block;
+    transition: 0.3s;
+}
+
+/*links on the navigation menu*/
+.nav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 19px;
+    color: #ffcd00;
+    display: block;
+    transition: 0.3s;
+}
+
+/*links change color when you mouse over them*/
+.nav a:hover, .offcanvas a:focus {
+    color: #ffffff;
+}
+
+/*close button (top right corner of nav bar)*/
+.nav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 4px;
+    font-size: 36px;
+    margin-left: 50px;
+}

@@ -1,7 +1,8 @@
 <html>
 <asset:stylesheet src="application.css"/>
 <asset:stylesheet src="bootstrap.css"/>
-
+<asset:stylesheet href="navigation.css"/>
+<asset:javascript src="navigation.js"/>
 
 <!--Load the AJAX API-->
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -59,7 +60,21 @@
 
 </script>
 
+<!--navigation bar-->
 <body style="alignment: top;  background: #acacac">
+<div class = "navbtn" onmouseover = "openNav()">
+    <div id="myNav" class="nav" onmouseout = "closeNav()">
+        <h4 style = "text-align: left;"> Menu </h4>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="http://localhost:8080/">Home</a>
+        <a href="http://localhost:8080/ask/stats.html">Question Results</a>
+        <a href="http://localhost:8080/ask.html">Create a Question</a>
+        <a href="http://localhost:8080/ask/edit.html">Edit a Question</a>
+        <a href="http://localhost:8080/touch/index.html">Take the Survey</a>
+        <a href="#">Help</a>
+    </div>
+</div>
+
 <div style="padding-left:10%; padding-right:10%;">
 
     <h1 style = "font-size: 36px; text-align: center; color: #ffc900; text-shadow: -.75px 0 #000000,0 .75px #000000,.75px 0 #000000,0 -.75px #000000; margin-top: 40px"> Question Results </h1>

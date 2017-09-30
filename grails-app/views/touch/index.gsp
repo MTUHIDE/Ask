@@ -7,6 +7,8 @@
 <asset:stylesheet href="main.css"/>
 <asset:stylesheet href="touch.css"/>
 
+
+
 <!-- <img src="touch_images/USG_logo.png"  alt="USG logo" height="50px" width="50px"/>-->
 <div class="container">
     <img id="usgLogo" class="center" src="${resource(dir:'images',file:'USG_logo.png')}" />

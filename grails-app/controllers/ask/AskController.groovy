@@ -76,4 +76,6 @@ class AskController {
 
 
     }
+
+    def help() {}
 }

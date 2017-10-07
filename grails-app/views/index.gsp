@@ -53,7 +53,7 @@
                 </a>
             </div>
             <div class="col-sm-3 menuTile" id="block6">
-                <a href="ask/stats.html">
+                <a href="ask/help.html">
                     <div style="height: 100%; width: 100%;">
                         <img src="${resource(dir:'images',file:'1110.png')}" />
                         <h2 class="blackText">HELP</h2>

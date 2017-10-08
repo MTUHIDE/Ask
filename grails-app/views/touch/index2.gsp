@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <title> Share your opinion! </title>
+</head>
+<body style="alignment: top;  background: #8a8b8c">
+<asset:stylesheet href="main.css"/>
+<asset:stylesheet href="touch.css"/>
+
+
+
+<!-- <img src="touch_images/USG_logo.png"  alt="USG logo" height="50px" width="50px"/>-->
+<div class="container">
+    <img id="usgLogo" class="center" src="${resource(dir:'images',file:'USG_logo.png')}" />
+
+
+    <div style = "border: thick solid #000000; margin: 40px; margin-left: 80px; margin-right: 80px; position: relative;">
+        <div style = "border: thick solid #ffcd00; border-width: 5px">
+            <div style = "padding: 15px; padding-left: 40px; padding-right: 40px; background: #FFFFFF">
+                <h1 style = "font-size: 72px; text-align: center; color: #ffcd00; text-shadow: -.75px 0 #000000,0 .75px #000000,.75px 0 #000000,0 -.75px #000000; margin: 40px">
+                    Share Your Opinion!
+                </h1>
+            </div>
+        </div>
+    </div>
+    <g:link action="scan2">
+        <div class="button center" style= "color: #ffcd00">
+            Tap to Begin
+        </div>
+    </g:link>
+</div>
+</body>
+</html>

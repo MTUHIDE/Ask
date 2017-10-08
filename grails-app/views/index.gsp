@@ -37,7 +37,7 @@
         </div>
         <div class="row">
             <div class="col-sm-3 menuTile" id="block4">
-                <a href="ask/stats.html">
+                <a href="touch/index.html">
                     <div style="height:100%; width:100%;">
                         <img src="${resource(dir:'images',file:'plainicon.com-10528-256px.png')}" />
                         <h2 class="blackText">Results</h2>
@@ -45,7 +45,7 @@
                 </a>
             </div>
             <div class="col-sm-3 menuTile" id="block5">
-                <a href="touch/index.html">
+                <a href="touch/index2.html">
                     <div style="height: 100%; width:100%;">
                         <img src="${resource(dir:'images',file:'52479-200.png')}" />
                         <h2 class="blackText">Survey</h2>

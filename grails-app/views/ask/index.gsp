@@ -9,28 +9,17 @@
 <!--navigation bar-->
 <div class = "navbtn" onmouseover = "openNav()">
     <a href="http://localhost:8080/">
-        <img src="${resource(dir:'images',file:'clipart-home-icon-6.png')}" />
-    </a>
-
+        <img src="${resource(dir:'images',file:'clipart-home-icon-6.png')}" /> </a>
     <a href="http://localhost:8080/ask/stats.html">
-        <img src="${resource(dir:'images',file:'plainicon.com-10528-256px.png')}" />
-    </a>
-
+        <img src="${resource(dir:'images',file:'plainicon.com-10528-256px.png')}" /> </a>
     <a href="http://localhost:8080/ask.html">
-        <img src="${resource(dir:'images',file:'Question-mark-blackandwhite.png')}" />
-    </a>
-
+        <img src="${resource(dir:'images',file:'Question-mark-blackandwhite.png')}" /> </a>
     <a href="http://localhost:8080/ask/edit.html">
-        <img src="${resource(dir:'images',file:'22-512.png')}" />
-    </a>
-
+        <img src="${resource(dir:'images',file:'22-512.png')}" /> </a>
     <a href="http://localhost:8080/touch/index.html">
-        <img src="${resource(dir:'images',file:'52479-200.png')}" />
-    </a>
-
+        <img src="${resource(dir:'images',file:'52479-200.png')}" /> </a>
     <a href="http://localhost:8080/ask/help.html">
-        <img src="${resource(dir:'images',file:'1110.png')}" />
-    </a>
+        <img src="${resource(dir:'images',file:'1110.png')}" /> </a>
 
     <div id="myNav" class="nav" onmouseout = "closeNav()">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>

@@ -3,6 +3,13 @@
 <asset:stylesheet src="bootstrap.css"/>
 <asset:stylesheet href="navigation.css"/>
 <asset:javascript src="navigation.js"/>
+<head>
+    <style>
+    p {
+        font-size: 18px;
+    }
+    </style>
+</head>
 <body style="background: #8a8b8c">
 <!--navigation bar-->
 <div class = "navbtn" onmouseover = "openNav()">
@@ -58,10 +65,13 @@
                 <p>This page links to the touch screen interface where the actual surveys reside.</p>
                 <br>
                 <br>
-                <h2 style = "font-size: 24px" >If you have any issues or questions, please contact the Humane Design Interface Enterprise (HIDE) by emailing hide@mtu.edu.</h2>
+                <h2 style = "font-size: 24px" >If you have any issues or questions, please contact the Humane Design Interface Enterprise (HIDE) by emailing <a href="mailto:hide-management-l@mtu.edu">hide-management-l@mtu.edu</a>.</h2>
+                <br>
             </div>
         </div>
     </div>
+    <br>
+    <br>
 </div>
 </body>
 

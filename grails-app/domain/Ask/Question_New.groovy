@@ -1,12 +1,12 @@
-package ask
+package Ask
 
-class Question {
+class Question_New {
 
     static constraints = {
     }
 
-    String  question;
-    String[] options;
-    static hasMany = [vote : Vote];
+    String  qst_txt;
+
+    static hasMany = [ans : Ans_Key];
 
 }

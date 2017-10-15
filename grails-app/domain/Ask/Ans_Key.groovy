@@ -1,12 +1,14 @@
-package ask
+package Ask
 
-class Vote {
+class Ans_Key {
 
     static constraints = {
     }
 
-    String user_id; // whatever is given from the card
-    String question_id; // the question the user is responding to
-    String result;
+    Integer qst_number; // Upon row creation, should be populated with Question_New primary key
+    String ans_txt; // Actual text for the question answers
+    Integer result_number; // Increasing number for the amount of correct responses
+
+    static belongsTo = [qst : Question_New]
 
 }

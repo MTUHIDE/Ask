@@ -17,6 +17,7 @@
 <asset:stylesheet href="main.css"/>
 <asset:stylesheet href="touch.css"/>
 
+<!--
 <div style = "border: thick solid #000000; margin-left: 80px; margin-right: 80px; margin-top: 200px;">
     <div style = "border: thick solid #ffcd00; border-width: 5px">
         <div style = "padding: 15px; padding-left: 40px; padding-right: 40px; background: #FFFFFF">
@@ -24,6 +25,13 @@
                 Thank You!
             </h1>
         </div>
+    </div>
+</div>-->
+
+<div id="container">
+    <div style="vertical-align: middle;">
+        <img id="usgLogo" class="center" style="width: 100%; height: 100%" src="${resource(dir:'images',file:'done2Display.png')}" />
+
     </div>
 </div>
 

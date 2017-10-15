@@ -11,7 +11,7 @@
     // Load the Visualization API and the corechart package.
     google.charts.load('current', {'packages':['corechart']});
 
-    // Set a callback to run when the Google VisualiRzation API is loaded.
+    // Set a callback to run when the Google Visualization API is loaded.
     google.charts.setOnLoadCallback(drawChart);
 
     // Callback that creates and populates a data table,
@@ -61,7 +61,7 @@
 </script>
 
 <!--navigation bar-->
-<body style="alignment: top;  background: #acacac">
+<body style="alignment: top;  background: #8a8b8c">
 <div class = "navbtn" onmouseover = "openNav()">
     <a href="/">
         <img src="${resource(dir:'images',file:'clipart-home-icon-6.png')}" /> </a>
@@ -90,13 +90,13 @@
 
 <div style="padding-left:10%; padding-right:10%;">
 
-    <h1 style = "font-size: 36px; text-align: center; color: #ffc900; text-shadow: -.75px 0 #000000,0 .75px #000000,.75px 0 #000000,0 -.75px #000000; margin-top: 40px"> Question Results </h1>
+    <h1 style = "font-size: 36px; text-align: center; color: #ffcd00; text-shadow: -.75px 0 #000000,0 .75px #000000,.75px 0 #000000,0 -.75px #000000; margin-top: 40px"> Question Results </h1>
         <div id="questionData">
             <div class="row" style="margin-top: 50px">
                 <div class ="col-2">
                 <!--Div that will hold the pie chart-->
                 <div style = "float:left; border: thick solid #000000;">
-                    <div style = "border: thick solid #ffc900; border-width: 5px">
+                    <div style = "border: thick solid #ffcd00; border-width: 5px">
                         <div style = "padding: 15px; padding-left: 40px; padding-right: 40px; background: #FFFFFF">
                             <div>
                                 <h2>
@@ -121,12 +121,12 @@
                         </div>
                     </div>
                 </div>
-                <div style = " float:right; border: thick solid #000000; background: #ffc900;">
+                <div style = " float:right; border: thick solid #000000; background: #ffcd00;">
                     <div id="chart_div" style = "padding: 5px"></div>
                 </div>
                 </div>
             </div>
-                <div class="col-1" style="margin-top: 50px; border: thick solid #000000; background: #ffc900;">
+                <div class="col-1" style="margin-top: 50px; border: thick solid #000000; background: #ffcd00;">
                     <div id="chart_div2" style = "padding: 5px"></div>
                 </div>
         </div>

@@ -9,6 +9,7 @@ class BootStrap {
 
             def q2 = new Question(question:"What is your favorite sport?", options:["Football", "Basketball", "Soccer", "Baseball"])
             q2.save();
+
             println "Test questions...."
             println q1;
             println q2;

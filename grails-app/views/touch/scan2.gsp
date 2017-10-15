@@ -5,7 +5,7 @@
     <script>
         var scan_id = "";
         function doneScanning(){
-            window.location.href = "scan?cardid=" + encodeURIComponent(scan_id);
+            window.location.href = "scan2?cardid=" + encodeURIComponent(scan_id);
         }
 
         // the card scanner should act like a keyboard device
@@ -23,39 +23,22 @@
             }
         }
     </script>
-    <script>
-        // idle redirect
-        // if the user abandons the process go home
-        function redirect(){
-            window.location.href = "/touch/";
-        }
-
-        // 30 seconds
-        setTimeout(redirect, 30 * 1000);
-
-    </script>
 </head>
-<body style = "background: #8a8b8c">
+<body style = "background: #FFFFFF">
 <asset:stylesheet href="main.css"/>
 <asset:stylesheet href="touch.css"/>
+<asset:stylesheet href="touch2.css"/>
 
 
 
-
-<div style = "border: thick solid #000000; margin-left: 80px; margin-right: 80px; margin-top: 200px;">
-    <div style = "border: thick solid #ffcd00; border-width: 5px">
-        <div style = "padding: 15px; padding-left: 40px; padding-right: 40px; background: #FFFFFF">
-            <h1 style = "font-size: 72px; text-align: center; color: #ffcd00; text-shadow: -.75px 0 #000000,0 .75px #000000,.75px 0 #000000,0 -.75px #000000; margin: 40px">
-                Please Swipe your Michigan Tech ID
-            </h1>
-        </div>
-    </div>
+<div> <h1 id="title"> Survey Station </h1> </div>
+<div class="stripe">
+    <img id="scanLogo" class="center" src="${resource(dir:'images',file:'usg_logo2.png')}">
 </div>
-<div id="container">
-    <div style="vertical-align: middle;">
-        <img id="usgLogo" class="center" src="${resource(dir:'images',file:'USG_logo.png')}" />
-
-    </div>
+<div>
+    <h1 id="swipe">Swipe Your ID to Begin</h1>
+    <img id="techLogo" class="leftBottom" src="${resource(dir:'images',file:'michTech_logo.png')}">
+    <img id="hideLogo" class="rightBottom" src="${resource(dir:'images',file:'hide_logo.png')}">
 </div>
 </body>
 </html>

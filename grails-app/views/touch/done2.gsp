@@ -6,7 +6,7 @@
     <script>
         // after 5 seconds go back to the touch index so another can vote
         function redirect(){
-            window.location.href = "/touch/";
+            window.location.href = "/touch/scan2.html";
         }
 
         setTimeout(redirect, 5000);

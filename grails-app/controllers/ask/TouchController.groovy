@@ -3,7 +3,6 @@ package ask
 class TouchController {
 
     def index() {}
-    def index2() {}
 
     def scan() {
         println "Scan"
@@ -55,7 +54,7 @@ class TouchController {
             println nv.id;
             println voteid;
             // redirect to vote
-            redirect(action: "vote2", params:[id: q.id, vid:voteid])
+            redirect(action: "question2", params:[id: q.id, vid:voteid])
         }
         else{
             // just render the page
@@ -83,20 +82,11 @@ class TouchController {
     }
 
     def vote2(){
-        println "Vote"
-        println params.id
-        println params.vid;
-        def q = Question.findById(params.id)
-        println q.question
-        println q.options[0]
-        println q.options[1]
-        println q.options[2]
-        println q.options[3]
-        [question: q.question,
-         option1 : q.options[0],
-         option2 : q.options[1],
-         option3 : q.options[2],
-         option4 : q.options[3],
+        [question: params.question,
+         option1 : params.option1,
+         option2 : params.option2,
+         option3 : params.option3,
+         option4 : params.option4,
          vid:params.vid]
 
     }
@@ -135,5 +125,15 @@ class TouchController {
 
         //def v = new Vote(user_id: , question_id: )
 
+    }
+
+    def question2() {
+        def q = Question.findById(params.id)
+        [question: q.question,
+         option1 : q.options[0],
+         option2 : q.options[1],
+         option3 : q.options[2],
+         option4 : q.options[3],
+         vid:params.vid]
     }
 }

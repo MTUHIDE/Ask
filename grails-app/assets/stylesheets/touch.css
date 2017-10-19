@@ -61,18 +61,3 @@ body{
 
     */
 }
-
-.button2{
-    background-color: #cccccc;
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    height: 35%;
-    width: 48.3%;
-    line-height: 450%;
-    display: inline-block;
-    text-align:center;
-    vertical-align: middle;
-    font-size: 42pt;
-    font-weight: bold;
-    border-radius: 40px;
-    margin-top: 1%;
-}

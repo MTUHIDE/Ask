@@ -1,96 +1,97 @@
 #title {
-    font-size: 500%;
+    font-size: 10vh;
     text-align: center;
     color: #000000;
     font-weight: bold;
     font-family: Verdana;
     margin: 0;
+    padding: 0;
 }
 
 .stripe {
-    height: 67%;
+    height: 70vh;
     background: #ffcd00;
     overflow-y: hidden;
-    margin-top: 15px;
+    margin-top: 2vh;
     border-top: thick solid #000000;
     border-bottom: thick solid #000000;
-    border-top-width: 7px;
-    border-bottom-width: 7px;
+    border-top-width: thick;
+    border-bottom-width: thick;
 }
 
 .stripe2 {
-    height: 67%;
+    height: 70vh;
     background: #FFFFFF;
     overflow-y: hidden;
-    margin-top: 8%;
+    margin-top: 15vh;
 }
 
 #scanLogo {
-    width:45%;
-    height: 50%;
+    width: 45vw;
+    height: 50vh;
     z-index: 1;
 }
 
 #swipe {
-    font-size: 58px;
+    font-size: 8vh;
     text-align: center;
     color: #000000;
     font-weight: bold;
     font-family: Verdana;
     margin: 0;
-    padding-top: 20px;
+    padding-top: 1.5vh;
 }
 
 #techLogo {
-    height: 10%;
+    height: 10vh;
 }
 
 #hideLogo {
-    height: 13%;
+    height: 13vh;
 }
 
 .leftBottom {
     position: absolute;
-    left: 1%;
-    bottom: 2%;
+    left: 2vw;
+    bottom: 2vh;
 }
 
 .rightBottom {
     position: absolute;
-    right: 1%;
-    bottom: 1%;
+    right: 1vw;
+    bottom: 1vh;
 }
 
 .leftTop {
     position: absolute;
-    left: 1%;
-    top: 1%;
+    left: 1vw;
+    top: 1vh;
 }
 
 .rightTop {
     position: absolute;
-    right: 1%;
-    top: 2%;
+    right: 1vw;
+    top: 2vh;
 }
 
 #answerbtn {
     background: #2e6da4;
-    font-size: 20px;
-    padding: 15px 32px;
+    font-size: 1.5vw;
+    padding: 2vh 2vw;
     border: none;
     text-align: center;
-    border-radius: 8px;
+    border-radius: 0.5vw;
     color: white;
 }
 
 .btnright {
     position: absolute;
-    right: 2%;
-    bottom: 4%
+    right: 1.5vw;
+    bottom: 3vh;
 }
 
 .topBar {
-    height: 0%;
+    height: 0vh;
     margin: 0;
     padding: 0;
     background: #ffcd00;
@@ -98,9 +99,47 @@
 }
 
 .bottomBar {
-    height: 0%;
-    margin-top: 75%;
+    height: 0vh;
+    margin-top: 5vh;
     padding: 0;
     background: #ffcd00;
+    vertical-align: bottom;
     overflow: hidden;
+}
+
+.ans1 {
+    left: 2vw;
+    top: 17vh;
+    position: absolute;
+}
+
+.ans2 {
+    right: 2vw;
+    top: 17vh;
+    position: absolute;
+}
+
+.ans3 {
+    left: 2vw;
+    bottom: 17vh;
+    position: absolute;
+}
+
+.ans4 {
+    right: 2vw;
+    bottom: 17vh;
+    position: absolute;
+}
+
+#button2{
+    background-color: #cccccc;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    height: 32vh;
+    width: 47vw;
+    line-height: 35vh;
+    display: inline-block;
+    text-align: center;
+    font-size: 8vh;
+    font-weight: bold;
+    border-radius: 1.5vw;
 }

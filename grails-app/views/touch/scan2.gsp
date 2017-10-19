@@ -30,15 +30,15 @@
 <asset:stylesheet href="touch2.css"/>
 
 
+    <div> <h1 id="title"> Survey Station </h1> </div>
+    <div class="stripe">
+        <img id="scanLogo" class="center" src="${resource(dir:'images',file:'usg_logo2.png')}">
+    </div>
+    <div>
+        <h1 id="swipe">Swipe Your ID to Begin</h1>
+        <img id="techLogo" class="leftBottom" src="${resource(dir:'images',file:'michTech_logo.png')}">
+        <img id="hideLogo" class="rightBottom" src="${resource(dir:'images',file:'hide_logo.png')}">
+    </div>
 
-<div> <h1 id="title"> Survey Station </h1> </div>
-<div class="stripe">
-    <img id="scanLogo" class="center" src="${resource(dir:'images',file:'usg_logo2.png')}">
-</div>
-<div>
-    <h1 id="swipe">Swipe Your ID to Begin</h1>
-    <img id="techLogo" class="leftBottom" src="${resource(dir:'images',file:'michTech_logo.png')}">
-    <img id="hideLogo" class="rightBottom" src="${resource(dir:'images',file:'hide_logo.png')}">
-</div>
 </body>
 </html>

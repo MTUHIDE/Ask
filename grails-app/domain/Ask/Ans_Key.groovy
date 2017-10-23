@@ -9,6 +9,6 @@ class Ans_Key {
     String ans_txt; // Actual text for the question answers
     Integer result_number; // Increasing number for the amount of correct responses
 
-    static belongsTo = [qst : Question_New]
+    static belongsTo = [qst : Question_New] // Creates a dependency on the Question_New table
 
 }

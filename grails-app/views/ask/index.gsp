@@ -36,7 +36,7 @@
         <div style="background-color: #ffffff; width:91%; height: 91%; margin: auto; position: relative; top: 50%; transform: translateY(-50%);">
             <div style="margin: auto; position: relative; top: 50%; transform: translateY(-50%);">
                 <h1 style = "text-align: center;"> Create a new question </h1>
-                <div action="ask.html">
+                <form action="ask.html">
                     <div class="form-group row">
                         <div class="col-lg-12 input-group-lg">
                             <input name="question" style="width:100%;" class="form-control" type="text" placeholder="What Question would you like to ask?"/>
@@ -67,10 +67,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
-        </form>
     </div>
 </body>
 

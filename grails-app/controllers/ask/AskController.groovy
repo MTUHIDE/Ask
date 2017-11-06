@@ -16,9 +16,9 @@ class AskController {
 
             // Old database's way of saving inqueries, left in for now to retain capabilities
             // We should be safely able to remove this code once the new tables are fully integrated
-            def q1 = new Question(question:params.question,
-                    options:[o1,o2,o3,o4])
-            q1.save()
+//            def q1 = new Question(question:params.question,
+//                    options:[o1,o2,o3,o4])
+//            q1.save()
 
 
             // Writes qst_txt to new row, adds our results to their own rows within AnsKey
@@ -103,7 +103,11 @@ class AskController {
     def stats() {
         // get last question
         def q = Question.listOrderById(order: "asc", sort: "id")[-1];
-        println q
+
+//        def quest = CurrentQuestion.listOrderByAns(order: "asc", sort: "id");
+//        println quest.qst_txt + " the question woah"
+//        println quest.ans.ans_txt[0][3] + " ??????????"
+
         println q.id
         //def v = Vote.findAllByQuestion_id(q.id.toString());
         def r1 = Vote.findAllByQuestion_idAndResult(q.id.toString(), 0).size();

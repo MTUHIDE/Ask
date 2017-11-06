@@ -27,22 +27,22 @@
     </div>
 </div>
 <div id="container">
-    <g:link style="color: inherit;text-decoration: inherit;" action="done" params="[option:option1, vid:vid]">
+    <g:link style="color: inherit;text-decoration: inherit;" action="saveResponse" params="[option:option1, idlist:idlist, vid:vid]">
         <div style="float:left;width:30%;height:20%; margin-left: 40px; color: #ffcd00;" class="button">
             ${option1}
         </div>
     </g:link>
-    <g:link style="color: inherit;text-decoration: inherit;" action="done" params="[option:option2, vid:vid]">
+    <g:link style="color: inherit;text-decoration: inherit;" action="saveResponse" params="[option:option2, idlist:idlist, vid:vid]">
         <div style="float:right;width:30%;height:20%; margin-right: 40px; color: #ffcd00;" class="button">
             ${option2}
         </div>
     </g:link>
-    <g:link style="color: inherit;text-decoration: inherit;" action="done" params="[option:option3, vid:vid]">
+    <g:link style="color: inherit;text-decoration: inherit;" action="saveResponse" params="[option:option3, idlist:idlist, vid:vid]">
         <div style="float:left;width:30%;height:20%; margin-left: 40px; color: #ffcd00;" class="button">
             ${option3}
         </div>
     </g:link>
-    <g:link style="color: inherit;text-decoration: inherit;" action="done" params="[option:option4, vid:vid]">
+    <g:link style="color: inherit;text-decoration: inherit;" action="saveResponse" params="[option:option4, idlist:idlist, vid:vid]">
         <div style="float:right;width:30%;height:20%; margin-right: 40px; color: #ffcd00;" class="button">
             ${option4}
         </div>

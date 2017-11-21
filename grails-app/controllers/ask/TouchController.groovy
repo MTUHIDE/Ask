@@ -61,7 +61,11 @@ class TouchController {
             println nv.id;
             println voteid;
             // redirect to vote
-            redirect(action: "question2", params:[id: q.id, vid:voteid])
+            //redirect(action: "question2", params:[id: q.id, vid:voteid])
+
+            //NEW DATABASE CODE
+            def questions = CurrentQuestion.listOrderById(order: "asc", sort: "id");    //all questions in new database
+            redirect(action: "question2", params:[idlist: questions.id])     //go to vote with the list of id's
         }
         else{
             // just render the page
@@ -88,8 +92,7 @@ class TouchController {
 
     //NEW DATABASE CODE
         println "new stuff"
-        println params.idlist.size() + " the list size" //test
-       if (params.idlist.size() > 0) {  //if there are questions yet to be asked, display vote
+       if (params.idlist && params.idlist.size() > 0) {  //if there are questions yet to be asked, display vote
            def id = params.idlist[0];   //the next question id
            def quest = CurrentQuestion.findById(id);    //the next question
 
@@ -114,10 +117,8 @@ class TouchController {
              option2 : params.option2,
              option3 : params.option3,
              option4 : params.option4,
-             vid:params.vid]
-
-
-
+             vid:params.vid,
+             idlist: params.idlist]
     }
 
     def saveResponse() {
@@ -132,6 +133,20 @@ class TouchController {
 
         //go to next question, dropping previous question from the beginning of the idlist array
         redirect(action: "vote", params:[idlist: params.idlist.drop(1)])
+    }
+
+    def saveResponse2() {
+        //NEW DATABASE CODE
+        //updates result number
+        def ans = AnsKey.findByAns_txt(params.option);  //get the AnsKey object that corresponds to selected answer
+        println ans.ans_txt       //test
+        def resultNum = ans.result_number;  //previous result number
+        println ans.result_number + " before"
+        ans.setResult_number(resultNum + 1);    //update result number
+        println ans.result_number + " after"
+
+        //go to next question, dropping previous question from the beginning of the idlist array
+        redirect(action: "question2", params:[idlist: params.idlist.drop(1)])
     }
 
     def done(){
@@ -151,28 +166,33 @@ class TouchController {
     def done2(){
         // ok save the vote in the results table
         // note this means that a voter and vote aren't linked
-        def vote = Vote.findById(params.vid);
-        def question = Question.findById(vote.question_id);
-        def option_index = question.options.findIndexOf {it.contains(params.option)};
-        vote.result = option_index;
-        vote.save(flush: true, failOnError:true); // will trigger an error if not saved
-        //http://localhost:8080/touch/done?option=Pink
-        println params.option
-        //            def q2 = new Question(question:"What is your favorite sport?", options:["Football", "Basketball", "Soccer", "Baseball"])
-        //    String user_id; // whatever is given from the card
-        //String question_id; // the question the user is responding to
-
-        //def v = new Vote(user_id: , question_id: )
+//        def vote = Vote.findById(params.vid);
+//        def question = Question.findById(vote.question_id);
+//        def option_index = question.options.findIndexOf {it.contains(params.option)};
+//        vote.result = option_index;
+//        vote.save(flush: true, failOnError:true); // will trigger an error if not saved
+//        //http://localhost:8080/touch/done?option=Pink
+//        println params.option
 
     }
 
     def question2() {
-        def q = Question.findById(params.id)
-        [question: q.question,
-         option1 : q.options[0],
-         option2 : q.options[1],
-         option3 : q.options[2],
-         option4 : q.options[3],
-         vid:params.vid]
+        //NEW DATABASE CODE
+        println "new stuff"
+        if (params.idlist && params.idlist.size() > 0) {  //if there are questions yet to be asked, display vote
+            def id = params.idlist[0];   //the next question id
+            def quest = CurrentQuestion.findById(id);    //the next question
+
+            // write the question and answer text to the view
+            [question: quest.qst_txt,
+             option1 : quest.ans.ans_txt[0],
+             option2 : quest.ans.ans_txt[1],
+             option3 : quest.ans.ans_txt[2],
+             option4 : quest.ans.ans_txt[3],
+             vid:params.vid,
+             idlist: params.idlist]
+        } else {
+            redirect(action: "done2") //if no more questions, show "thank you" screen
+        }
     }
 }

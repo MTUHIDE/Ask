@@ -19,7 +19,7 @@
 </head>
 
 <g:link action="vote2" params="[question:question, option1:option1, option2: option2, option3:option3,
-                                option4:option4, vid:vid]" >
+                                option4:option4, vid:vid, idlist: idlist]" >
 
     <body style="alignment: top;  background: #ffcd00">
 

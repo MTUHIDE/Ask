@@ -32,6 +32,16 @@ class TouchController {
             //NEW DATABASE CODE
             def questions = CurrentQuestion.listOrderById(order: "asc", sort: "id");    //all questions in new database
             println questions.qst_txt +  " the questions!!!!"       //test
+            println questions.size();
+            for (int i = 0; i < questions.size(); i++) {
+                println questions[i].is_selected + " selected?";
+                if (questions[i].is_selected == "") {
+                    questions.remove(i);
+                    i--;
+                }
+            }
+            println questions.qst_txt;
+
             redirect(action: "vote", params:[idlist: questions.id])     //go to vote with the list of id's
         }
         else{
@@ -65,6 +75,12 @@ class TouchController {
 
             //NEW DATABASE CODE
             def questions = CurrentQuestion.listOrderById(order: "asc", sort: "id");    //all questions in new database
+            for (int i = 0; i < questions.size(); i++) {
+                if (questions[i].is_selected == "") {
+                    questions.remove(i);
+                    i--;
+                }
+            }
             redirect(action: "question2", params:[idlist: questions.id])     //go to vote with the list of id's
         }
         else{

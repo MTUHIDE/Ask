@@ -130,4 +130,37 @@ class AskController {
     }
 
     def help() {}
+
+    def checkUpdate() {
+        println "checkUpdate";
+        def questions = CurrentQuestion.listOrderById(order: "asc", sort: "id");
+        if (params.checkall == 'true') {    //check all
+            for (int i = 0; i < questions.size(); i++) {
+                questions[i].is_selected = "checked";
+            }
+        } else if (params.checkall == 'false') {    //uncheck all
+            for (int i = 0; i < questions.size(); i++) {
+                questions[i].is_selected = "";
+            }
+        } else {    //check or uncheck a specific question
+            def q = CurrentQuestion.findById(params.question);
+            println q.qst_txt;
+            if (q.is_selected == "") {
+                q.is_selected = "checked";
+            } else {
+                q.is_selected = "";
+            }
+        }
+
+        redirect(action: "select"); //go back to select.html
+    }
+
+    def select() {
+        def questions = CurrentQuestion.listOrderById(order: "asc", sort: "id");
+        println questions.qst_txt;
+        //println questions.qst_txt;
+        [questions: questions]
+    }
+
+
 }

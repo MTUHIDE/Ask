@@ -100,32 +100,55 @@ class AskController {
         return [questions:questions];
     }
     def screen() {}
+
     def stats() {
         // get last question
-        def q = Question.listOrderById(order: "asc", sort: "id")[-1];
+        def q = CurrentQuestion.listOrderById(order: "asc", sort: "id")
+        //def q2 = CurrentQuestion.findById(1);
+        def questions = q.listIterator();
 
-//        def quest = CurrentQuestion.listOrderByAns(order: "asc", sort: "id");
-//        println quest.qst_txt + " the question woah"
-//        println quest.ans.ans_txt[0][3] + " ??????????"
-
-        println q.id
+        //def quest = CurrentQuestion.listOrderByAns(order: "asc", sort: "id");
+        //println quest.qst_txt + " the question woah"
+        //println quest.ans.ans_txt[0][3] + " ??????????"
         //def v = Vote.findAllByQuestion_id(q.id.toString());
-        def r1 = Vote.findAllByQuestion_idAndResult(q.id.toString(), 0).size();
-        def r2 = Vote.findAllByQuestion_idAndResult(q.id.toString(), 1).size();
-        def r3 = Vote.findAllByQuestion_idAndResult(q.id.toString(), 2).size();
-        def r4 = Vote.findAllByQuestion_idAndResult(q.id.toString(), 3).size();
+
+        // Old Implementation of Stats Page
+        /*
+        def r1 = q2.ans.result_number[0];
+        def r2 = q2.ans.result_number[1];
+        def r3 = q2.ans.result_number[2];
+        def r4 = q2.ans.result_number[3];
 
         [result1: r1,
          result2: r2,
          result3: r3,
          result4: r4,
-         option1:q.options[0],
-         option2:q.options[1],
-         option3:q.options[2],
-         option4:q.options[3],
-         question:q.question
+         option1:q2.ans.ans_txt[0],
+         option2:q2.ans.ans_txt[1],
+         option3:q2.ans.ans_txt[2],
+         option4:q2.ans.ans_txt[3],
+         question:q.qst_txt,
+         questions:questions
         ]
+        */
 
+        def q4 = CurrentQuestion.findById(params.qid);
+        if (q4 == null){
+            return [questions:questions];
+        }
+
+        return [qid:params.qid,
+                questions:questions,
+                question:q4.qst_txt,
+                option1:q4.ans.ans_txt[0],
+                option2:q4.ans.ans_txt[1],
+                option3:q4.ans.ans_txt[2],
+                option4:q4.ans.ans_txt[3],
+                result1: q4.ans.result_number[0],
+                result2: q4.ans.result_number[1],
+                result3: q4.ans.result_number[2],
+                result4: q4.ans.result_number[3],
+        ]
 
     }
 

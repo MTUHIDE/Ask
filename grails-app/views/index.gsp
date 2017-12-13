@@ -56,7 +56,7 @@
                 <a href="ask/help.html">
                     <div style="height: 100%; width: 100%;">
                         <img src="${resource(dir:'images',file:'1110.png')}" />
-                        <h2 class="blackText">HELP</h2>
+                        <h2 class="blackText">Help</h2>
                     </div>
                 </a>
             </div>

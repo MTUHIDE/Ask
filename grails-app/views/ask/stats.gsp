@@ -61,7 +61,8 @@
 </script>
 
 <!--navigation bar-->
-<body style="alignment: top;  background: #8a8b8c">
+<body style="background: #8a8b8c">
+
 <div class = "navbtn" onmouseover = "openNav()">
     <a href="/">
         <img src="${resource(dir:'images',file:'clipart-home-icon-6.png')}" /> </a>
@@ -88,49 +89,59 @@
         <a href="/ask/select.html">Select Questions</a>
     </div>
 </div>
-
-<div style="padding-left:10%; padding-right:10%;">
-
-    <h1 style = "font-size: 36px; text-align: center; color: #ffcd00; text-shadow: -.75px 0 #000000,0 .75px #000000,.75px 0 #000000,0 -.75px #000000; margin-top: 40px"> Question Results </h1>
-        <div id="questionData">
+<div style="background-color: #ffffff; margin: 50px; margin-left: 90px ">
+    <h1>
+        <br/>
+    </h1>
+     <h1 style = "text-align: center; font-family: sans-serif;"> Question Results </h1>
+    <div id="questionData" >
             <div class="row" style="margin-top: 50px">
                 <div class ="col-2">
                 <!--Div that will hold the pie chart-->
-                <div style = "float:left; border: thick solid #000000;">
-                    <div style = "border: thick solid #ffcd00; border-width: 5px">
-                        <div style = "padding: 15px; padding-left: 40px; padding-right: 40px; background: #FFFFFF">
-                            <div>
-                                <h2>
-                                    <div class = "input-group">
-                                        <select>
-                                            <option value="default">Please select a Question</option>
-                                            <option>${question}</option>
-                                        </select>
-                                    </div>
-                                </h2>
-                                <script>
+                    <div class = "input-group">
 
-                                </script>
-                                <ol style="font-size: 24px;">
-                                    <li id="option1" >${option1}</li>
-                                    <li id="option2" >${option2}</li>
-                                    <li id="option3" >${option3}</li>
-                                    <li id="option4" >${option4}</li>
+                        <select onchange="onSelectQ();">
+                            <option value="default">Select a question...</option>
+                            <g:each in="${questions}">
+                                <option id="${it.id}">${it.qst_txt}</option>
+                            </g:each>
 
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
+                        </select>
+
+                        <script>
+
+                            function onSelectQ (){
+                                tag = document.getElementsByTagName("select")[0];
+                                id = tag.options[tag.selectedIndex].id;
+                                location = window.location;
+                                url = location.protocol + '//' + location.host + location.pathname  + "?qid=" + id;
+                                window.location.href = url;
+                            };
+
+                        </script>
+
                 </div>
-                <div style = " float:right; border: thick solid #000000; background: #ffcd00;">
+
+                <h2 id="QuestionText" >${question}</h2>
+                <ol style="float: left; font-size: 32px;">
+                    <li id="option1" >${option1}</li>
+                    <li id="option2" >${option2}</li>
+                    <li id="option3" >${option3}</li>
+                    <li id="option4" >${option4}</li>
+                </ol>
+
+                <div style = "float: right; border: thick solid #000000; background: #ffcd00;">
                     <div id="chart_div" style = "padding: 5px"></div>
+                </div>
+                <div class="col-1" style=" margin-top: 300px; border: thick solid #000000; background: #ffcd00; width: 1200px; ">
+                    <div id="chart_div2" style = "padding: 5px; "></div>
                 </div>
                 </div>
             </div>
-                <div class="col-1" style="margin-top: 50px; border: thick solid #000000; background: #ffcd00;">
-                    <div id="chart_div2" style = "padding: 5px"></div>
-                </div>
-        </div>
+    </div>
+    <h1>
+        <br/>
+    </h1>
 </div>
 
 <div id="result1" style="display:none">${result1}</div>

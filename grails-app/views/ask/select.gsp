@@ -46,11 +46,18 @@
                                 <div class="list-group">
                                     <g:each in="${questions}">
                                         <li class="list-group-item">
+                                            <div style="height: 75px">
                                             <g:form name="${it.id}" action="checkUpdate" params="[question:it.id, checkall:'no']">
                                                 <label> <input type="checkbox" value="${it.is_selected}"
                                                                onclick="document.getElementById(${it.id}).submit()"
-                                                                ${it.is_selected}>${it.qst_txt}</label>
+                                                                ${it.is_selected}/>
+                                                    ${it.qst_txt}
+                                                </label>
                                             </g:form>
+                                            <g:link style="color: inherit; text-decoration: inherit; float: right; " action="goToEdit" params="[question:questions[0], checkall:'no', question:it.id]">
+                                                <input class="form-control btn btn-block btn-primary" type="submit" value="Edit"/>
+                                            </g:link>
+                                            </div>
                                         </li>
                                     </g:each>
                                 </div>
@@ -63,7 +70,7 @@
                     <g:link style="color: inherit; text-decoration: inherit;" action="checkUpdate" params="[question:questions[0], checkall:'true']">
                         <input class="form-control btn btn-block btn-primary" type="submit" value="Check All">
                     </g:link>
-                    <g:link style="color: inherit; text-decoration: inherit; padding: inherit" action="checkUpdate" params="[question:questions[0].id, checkall:'false']">
+                    <g:link style="color: inherit; text-decoration: inherit; padding: inherit" action="checkUpdate" params="[question:questions[0], checkall:'false']">
                         <input class="form-control btn btn-block btn-primary" type="submit" value="Uncheck All">
                     </g:link>
                 </div>

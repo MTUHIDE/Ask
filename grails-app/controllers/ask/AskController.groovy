@@ -61,7 +61,7 @@ class AskController {
             }
             */
 
-            render(view:'/index')        }
+            render(view:'index')        }
 
         return;
     }
@@ -176,6 +176,10 @@ class AskController {
         }
 
         redirect(action: "select"); //go back to select.html
+    }
+
+    def goToEdit() {
+        redirect(url: "/ask/edit.html?qid=" + 1)
     }
 
     def select() {

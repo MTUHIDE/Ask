@@ -54,8 +54,9 @@
                                                     ${it.qst_txt}
                                                 </label>
                                             </g:form>
-                                            <g:link style="color: inherit; text-decoration: inherit; float: right; " action="goToEdit" params="[question:questions[0], checkall:'no', question:it.id]">
-                                                <input class="form-control btn btn-block btn-primary" type="submit" value="Edit"/>
+                                            <g:link style="color: inherit; text-decoration: inherit; float: right;" action="goToEdit" params="[question:it.id]">
+                                                <input class="form-control btn btn-block btn-primary" type="submit" value="Edit">
+                                                </input>
                                             </g:link>
                                             </div>
                                         </li>

@@ -54,15 +54,18 @@
 
             <div class="form-group row">
                 <div class="col-lg-12 input-group-lg">
+
+
+                    <!--  This is a select dropdown that was part of a previous design of the project.
                     <select onchange="onSelectQ();">
                         <option value="default">Select a question...</option>
-                        <g:each in="${questions}">
-                            <option id="${it.id}">${it.question}</option>
-                        </g:each>
+                       < g:each in="$ {questions}">
+                            <option id="$ {it.id}">$ {it.question}</option>
+                        < /g:each>
+                    </select> -->
 
-                    </select>
                     <div style = "margin-top:10px;margin-bottom:0px;" class="alert alert-info">
-                        Select a question above and then make any changes to the questions or options you'd like.
+                        Make changes to the questions or options.
                     </div>
                 </div>
             </div>

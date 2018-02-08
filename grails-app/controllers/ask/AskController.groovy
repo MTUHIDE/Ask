@@ -67,32 +67,30 @@ class AskController {
     }
     def edit() {
         // get last id
-        def all_questions = Question.listOrderById(order: "asc", sort: "id")
-        println all_questions
+
+        def all_questions = CurrentQuestion.listOrderById(order: "asc", sort: "id")
         def questions = all_questions.listIterator();
         if (params.qid){
-            def q = Question.findById(params.qid);
+            def q = CurrentQuestion.findById(params.qid);
             if (q == null){
                 return [questions:questions];
             }
-            println q.question.toString()
-            println q.options.toString()
             return [qid:params.qid,
                     questions:questions,
-                    question:q.question,
-                    option1: q.options[0],
-                    option2: q.options[1],
-                    option3: q.options[2],
-                    option4: q.options[3]
+                    question:q.qst_txt,
+                    option1: q.ans.ans_txt[0],
+                    option2: q.ans.ans_txt[1],
+                    option3: q.ans.ans_txt[2],
+                    option4: q.ans.ans_txt[3]
             ]
         }
         if (params.cid){
-            def q = Question.findById(params.cid);
-            q.question = params.question;
-            q.options[0] = params.option1;
-            q.options[1] = params.option2;
-            q.options[2] = params.option3;
-            q.options[3] = params.option4;
+            def q = CurrentQuestion.findById(params.cid);
+            q.qst_txt = params.question;
+            q.ans.ans_txt[0] = params.option1;
+            q.ans.ans_txt[1] = params.option2;
+            q.ans.ans_txt[2] = params.option3;
+            q.ans.ans_txt[3] = params.option4;
             q.save(flush:true, failOnError:true);
 
         }
@@ -174,12 +172,13 @@ class AskController {
                 q.is_selected = "";
             }
         }
-
         redirect(action: "select"); //go back to select.html
     }
 
     def goToEdit() {
-        redirect(url: "/ask/edit.html?qid=" + 1)
+        // Used in the select page to route the edit button for each question to the correct edit page
+        def q = CurrentQuestion.findById(params.question);
+        redirect(url: "/ask/edit.html?qid=" + q.id)
     }
 
     def select() {

@@ -67,7 +67,6 @@ class AskController {
     }
     def edit() {
         // get last id
-
         def all_questions = CurrentQuestion.listOrderById(order: "asc", sort: "id")
         def questions = all_questions.listIterator();
         if (params.qid){
@@ -84,13 +83,16 @@ class AskController {
                     option4: q.ans.ans_txt[3]
             ]
         }
+
         if (params.cid){
             def q = CurrentQuestion.findById(params.cid);
             q.qst_txt = params.question;
-            q.ans.ans_txt[0] = params.option1;
-            q.ans.ans_txt[1] = params.option2;
-            q.ans.ans_txt[2] = params.option3;
-            q.ans.ans_txt[3] = params.option4;
+            q.ans[0].ans_txt = params.option1;
+            q.ans[1].ans_txt = params.option2;
+            q.ans[2].ans_txt = params.option3;
+            q.ans[3].ans_txt = params.option4;
+            println params
+            println q.ans.ans_txt
             q.save(flush:true, failOnError:true);
 
         }

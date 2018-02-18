@@ -19,7 +19,7 @@
     setTimeout(redirect, 30 * 1000);
 
 </script>
-<div><h1 id="title" style="font-size: 8vh; padding: 2vh;">${question}</h1></div>
+<div><h1 id="title" style="font-size: 4vh; padding: 2vh; height: 10vh;">${question}</h1></div>
 <div class="stripe" style="background: #FFFFFF; border: none; margin-top: 1.5vh;">
     <g:link style="color: inherit; text-decoration: inherit;" action="saveResponse2" params="[option:option1, idlist:idlist, vid:vid]">
         <div class="ans1" id="button2">

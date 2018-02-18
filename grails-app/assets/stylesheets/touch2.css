@@ -1,5 +1,5 @@
 #title {
-    font-size: 10vh;
+    font-size: 10vmin;
     text-align: center;
     color: #000000;
     font-weight: bold;
@@ -139,7 +139,7 @@
     line-height: 35vh;
     display: inline-block;
     text-align: center;
-    font-size: 8vh;
+    font-size: 6vh;
     font-weight: bold;
     border-radius: 1.5vw;
 }

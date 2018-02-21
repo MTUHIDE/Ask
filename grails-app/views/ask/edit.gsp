@@ -12,25 +12,25 @@
         <img src="${resource(dir:'images',file:'clipart-home-icon-6.png')}" /> </a>
     <a href="/ask.html">
         <img src="${resource(dir:'images',file:'Question-mark-blackandwhite.png')}" /> </a>
-    <a href="/ask/edit.html">
-        <img src="${resource(dir:'images',file:'22-512.png')}" /> </a>
     <a href="/ask/stats.html">
         <img src="${resource(dir:'images',file:'plainicon.com-10528-256px.png')}" /> </a>
-    <a href="/touch/index.html">
+    <a href="/touch/scan2.html">
         <img src="${resource(dir:'images',file:'52479-200.png')}" /> </a>
+    <a href="/ask/select.html">
+        <img src="${resource(dir:'images',file:'checkbox.png')}" /> </a>
     <a href="/ask/help.html">
         <img src="${resource(dir:'images',file:'1110.png')}" /> </a>
-    <a href="/ask/select.html"></a>
+
 
     <div id="myNav" class="nav" onmouseout = "closeNav()">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="/">Home</a>
         <a href="/ask.html">Create a Question</a>
-        <a href="/ask/edit.html">Edit a Question</a>
         <a href="/ask/stats.html">Question Results</a>
-        <a href="/touch/index.html">Take the Survey</a>
-        <a href="/ask/help.html">Help</a>
+        <a href="/touch/scan2.html">Take the Survey</a>
         <a href="/ask/select.html">Select Questions</a>
+        <a href="/ask/help.html">Help</a>
+
     </div>
 </div>
 <div style="padding-left: 4%; height: 95%;">

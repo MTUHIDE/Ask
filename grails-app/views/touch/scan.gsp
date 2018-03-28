@@ -12,6 +12,8 @@
         document.onkeypress = function(event) {
             var char = String.fromCharCode(event.charCode);
             scan_id += char;
+            console.log(scan_id);
+
             console.log('Character is: ');
             console.log(char);
             // the card reader should deliver this all at once

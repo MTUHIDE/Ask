@@ -53,10 +53,14 @@
                                                     ${it.qst_txt}
                                                 </label>
                                             </g:form>
-                                            <g:link style="color: inherit; text-decoration: inherit; float: right;" action="goToEdit" params="[question:it.id]">
+                                            <g:link style="color: inherit; text-decoration: inherit; float: right; action="goToEdit" params="[question:it.id]">
                                                 <input class="form-control btn btn-block btn-primary" type="submit" value="Edit">
                                                 </input>
                                             </g:link>
+                                                <g:link style="color: inherit; text-decoration: inherit; margin-right: 10px; float: right; " action="delete" params="[question:it.id]">
+                                                    <input class="form-control btn btn-block btn-primary" type="submit" value="Delete">
+                                                    </input>
+                                                </g:link>
                                             </div>
                                         </li>
                                     </g:each>

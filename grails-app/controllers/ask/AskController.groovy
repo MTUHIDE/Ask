@@ -69,6 +69,7 @@ class AskController {
         // get last id
         def all_questions = CurrentQuestion.listOrderById(order: "asc", sort: "id")
         def questions = all_questions.listIterator();
+
         if (params.qid){
             def q = CurrentQuestion.findById(params.qid);
             if (q == null){
@@ -83,6 +84,7 @@ class AskController {
                     option4: q.ans.ans_txt[3]
             ]
         }
+
 
         if (params.cid){
             def q = CurrentQuestion.findById(params.cid);
@@ -181,6 +183,12 @@ class AskController {
         // Used in the select page to route the edit button for each question to the correct edit page
         def q = CurrentQuestion.findById(params.question);
         redirect(url: "/ask/edit.html?qid=" + q.id)
+    }
+
+    def delete() {
+        def q = CurrentQuestion.findById(params.question);
+        q.delete(flush: true);
+        redirect(url: "/ask/select.html");
     }
 
     def select() {

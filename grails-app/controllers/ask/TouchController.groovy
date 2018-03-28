@@ -65,6 +65,7 @@ class TouchController {
         def hasUserVotedOnThisQuestion = v.any {it.user_id == params.cardid};
 
         // there is a cardid and that card it hasn't already voted
+
         if (params.cardid && !hasUserVotedOnThisQuestion){
             // get the question id and record the card it
             def nv = new Vote(user_id:params.cardid, question_id: q.id, result:-1);

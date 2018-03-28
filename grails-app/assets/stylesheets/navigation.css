@@ -36,11 +36,11 @@ img {
 .nav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 19px;
+    font-size: 16px;
     color: #ffcd00;
     display: block;
     white-space: nowrap;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 /*links change color when you mouse over them*/

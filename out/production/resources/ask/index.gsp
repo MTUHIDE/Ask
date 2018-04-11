@@ -10,24 +10,25 @@
 <div class = "navbtn" onmouseover = "openNav()">
     <a href="/">
         <img src="${resource(dir:'images',file:'clipart-home-icon-6.png')}" /> </a>
-    <a href="/ask/stats.html">
-        <img src="${resource(dir:'images',file:'plainicon.com-10528-256px.png')}" /> </a>
     <a href="/ask.html">
         <img src="${resource(dir:'images',file:'Question-mark-blackandwhite.png')}" /> </a>
-    <a href="/ask/edit.html">
-        <img src="${resource(dir:'images',file:'22-512.png')}" /> </a>
-    <a href="/touch/index.html">
+    <a href="/ask/stats.html">
+        <img src="${resource(dir:'images',file:'plainicon.com-10528-256px.png')}" /> </a>
+    <a href="/touch/scan2.html">
         <img src="${resource(dir:'images',file:'52479-200.png')}" /> </a>
+    <a href="/ask/select.html">
+        <img src="${resource(dir:'images',file:'checkbox.png')}" /> </a>
     <a href="/ask/help.html">
         <img src="${resource(dir:'images',file:'1110.png')}" /> </a>
+
 
     <div id="myNav" class="nav" onmouseout = "closeNav()">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="/">Home</a>
-        <a href="/ask/stats.html">Question Results</a>
         <a href="/ask.html">Create a Question</a>
-        <a href="/ask/edit.html">Edit a Question</a>
-        <a href="/touch/index.html">Take the Survey</a>
+        <a href="/ask/stats.html">Question Results</a>
+        <a href="/touch/scan2.html">Take the Survey</a>
+        <a href="/ask/select.html">Select Questions</a>
         <a href="/ask/help.html">Help</a>
     </div>
 </div>
@@ -36,7 +37,7 @@
         <div style="background-color: #ffffff; width:91%; height: 91%; margin: auto; position: relative; top: 50%; transform: translateY(-50%);">
             <div style="margin: auto; position: relative; top: 50%; transform: translateY(-50%);">
                 <h1 style = "text-align: center;"> Create a new question </h1>
-                <div action="ask.html">
+                <form action="ask.html">
                     <div class="form-group row">
                         <div class="col-lg-12 input-group-lg">
                             <input name="question" style="width:100%;" class="form-control" type="text" placeholder="What Question would you like to ask?"/>
@@ -67,10 +68,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
-        </form>
     </div>
 </body>
 

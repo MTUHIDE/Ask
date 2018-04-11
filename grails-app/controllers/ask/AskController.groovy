@@ -1,10 +1,5 @@
 package ask
 
-import Ask.AnsKey
-import Ask.CurrentQuestion
-import grails.converters.JSON
-import org.omg.CORBA.Current
-
 class AskController {
 
     def index() {

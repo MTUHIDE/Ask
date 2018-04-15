@@ -18,7 +18,11 @@ class TouchController {
         if (params.cardid && !hasUserVotedOnThisQuestion){
             // get the question id and record the card it
             def nv = new Vote(user_id:params.cardid, question_id: q.id, result:-1);
-            nv.save(flush: true, failOnError:true); // will trigger an error if not saved
+            try {
+                nv.save(flush: true, failOnError: true); // will trigger an error if not saved
+            } catch (Exception validationException) {
+                return
+            }
             println "Vote";
             println nv.id;
             def voteid = nv.id;
@@ -59,10 +63,15 @@ class TouchController {
         def hasUserVotedOnThisQuestion = v.any {it.user_id == params.cardid};
 
         // there is a cardid and that card it hasn't already voted
+
         if (params.cardid && !hasUserVotedOnThisQuestion){
             // get the question id and record the card it
             def nv = new Vote(user_id:params.cardid, question_id: q.id, result:-1);
-            nv.save(flush: true, failOnError:true); // will trigger an error if not saved
+            try {
+                nv.save(flush: true, failOnError: true); // will trigger an error if not saved
+            } catch (Exception validationException) {
+                return
+            }
             println "Vote";
             println nv.id;
             def voteid = nv.id;

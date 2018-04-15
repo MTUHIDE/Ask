@@ -26,6 +26,11 @@
             <ul class="errors">
                 <li>An error has occurred</li>
             </ul>
+
+            <!--Just a test put in by Josh and Max (4/8/18) -->
+            <ul class="errors">
+                <li>An error has occurred</li>
+            </ul>
         </g:else>
     </body>
 </html>

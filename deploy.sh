@@ -5,21 +5,31 @@ echo ""
 
 cd ./build/libs/
 
-if [ -s ./Ask.war ]
+if [ -s ./ask.war ]
 then
   echo "File exists on local machine, preparing to wipe at remote location..."
   echo ""
-  #wipe files at absolute pathnames
-  ssh 2017_hide_3@hci-dev.cs.mtu.edu "rm /var/lib/tomcats/2017_hide_3/webapps/*.war;"
 
-  echo "Taking a quick nap to allow tomcat to un-deploy! See you in 15 seconds..."
+  #stopping tomcat
+  echo "Stopping Tomcat..."
+  ssh -t 2017_hide_3@hci-dev.cs.mtu.edu "echo 'j6Stecuhas' | sudo -S systemctl stop tomcat@2017_hide_3;"
+  echo "Done!"
   echo ""
-  sleep 15
+
+  echo "Removing Deployment..."
+  ssh 2017_hide_3@hci-dev.cs.mtu.edu "rm /var/lib/tomcats/2017_hide_3/webapps/*.war; rm -r /var/lib/tomcats/2017_hide_3/webapps/ask;"
+  echo "Done!"
+  echo ""
 
   echo "Preparing to transfer file..."
-  echo ""
-  scp ./Ask.war 2017_hide_3@hci-dev.cs.mtu.edu:/var/lib/tomcats/2017_hide_3/webapps/Ask.war
+  sleep 3
+  scp ./ask.war 2017_hide_3@hci-dev.cs.mtu.edu:/var/lib/tomcats/2017_hide_3/webapps/ask.war
   echo "File transfer complete!"
+  echo ""
+
+  echo "Starting Tomcat..."
+  ssh -t 2017_hide_3@hci-dev.cs.mtu.edu "echo 'j6Stecuhas' | sudo -S systemctl start tomcat@2017_hide_3;"
+  echo "Done!"
   echo ""
 
 else

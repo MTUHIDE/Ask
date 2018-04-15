@@ -1,6 +1,4 @@
 package ask
-import Ask.AnsKey
-import Ask.CurrentQuestion
 
 class TouchController {
 
